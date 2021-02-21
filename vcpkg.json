@@ -1,5 +1,5 @@
 {
-  "name": "functions-framework-cpp-dev",
+  "name": "functions-framework-cpp",
   "version-string": "0.5.0",
   "port-version": 8,
   "homepage": "https://github.com/GoogleCloudPlatform/functions-framework-cpp/",
@@ -23,6 +23,11 @@
     "tests": {
       "description": "Unit and Integrations tests for functions-framework-cpp.",
       "dependencies": [
+        {
+          "name": "functions-framework-cpp",
+          "default-features": false,
+          "features": [ "framework" ]
+        },
         "boost-filesystem",
         "boost-log",
         "boost-process",
@@ -35,6 +40,11 @@
     "examples": {
       "description": "Unit and Integration tests for the functions-framework-cpp examples.",
       "dependencies": [
+        {
+          "name": "functions-framework-cpp",
+          "default-features": false,
+          "features": [ "test" ]
+        },
         "boost-property-tree",
         "google-cloud-cpp"
       ]
